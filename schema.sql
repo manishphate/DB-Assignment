@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS product (
     id INT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     desc TEXT NOT NULL,
-    SKU VARCHAR(255) NOT NULL,
+    SKU VARCHAR(50) NOT NULL,
     category_id INT NOT NULL,
     inventory_id INT NOT NULL,
     price DECIMAL(10, 2) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS product (
 
 CREATE TABLE IF NOT EXISTS product_category (
     id INT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     desc TEXT NOT NULL,
     created_at TIMESTAMP NOT NULL,
     modified_at TIMESTAMP NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS product_inventory (
 
 CREATE TABLE IF NOT EXISTS discount (
     id INT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     desc TEXT NOT NULL,
     discount_percent DECIMAL(5, 2) NOT NULL,
     active BOOLEAN NOT NULL,
